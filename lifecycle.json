@@ -1,0 +1,15 @@
+{
+  "Rules": [
+    {
+      "ID": "ArchivarArchivosViejos",
+      "Status": "Enabled",
+      "Prefix": "",
+      "Transitions": [
+        {
+          "Days": 30,
+          "StorageClass": "GLACIER"
+        }
+      ]
+    }
+  ]
+}

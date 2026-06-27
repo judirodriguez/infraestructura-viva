@@ -1,0 +1,69 @@
+{
+    "DBInstances": [
+        {
+            "DBInstanceIdentifier": "mi-postgres",
+            "DBInstanceClass": "db.t3.micro",
+            "Engine": "postgres",
+            "DBInstanceStatus": "available",
+            "MasterUsername": "admin",
+            "Endpoint": {
+                "Address": "172.18.0.2",
+                "Port": 7001
+            },
+            "AllocatedStorage": 20,
+            "PreferredBackupWindow": "04:00-06:00",
+            "VpcSecurityGroups": [
+                {
+                    "VpcSecurityGroupId": "sg-00000000",
+                    "Status": "active"
+                }
+            ],
+            "DBParameterGroups": [
+                {
+                    "DBParameterGroupName": "default.postgres16",
+                    "ParameterApplyStatus": "in-sync"
+                }
+            ],
+            "AvailabilityZone": "us-east-1b",
+            "DBSubnetGroup": {
+                "DBSubnetGroupName": "default",
+                "DBSubnetGroupDescription": "default subnet group",
+                "VpcId": "vpc-default",
+                "SubnetGroupStatus": "Complete",
+                "Subnets": [
+                    {
+                        "SubnetIdentifier": "subnet-default-c",
+                        "SubnetAvailabilityZone": {
+                            "Name": "us-east-1c"
+                        },
+                        "SubnetStatus": "Active"
+                    },
+                    {
+                        "SubnetIdentifier": "subnet-default-b",
+                        "SubnetAvailabilityZone": {
+                            "Name": "us-east-1b"
+                        },
+                        "SubnetStatus": "Active"
+                    },
+                    {
+                        "SubnetIdentifier": "subnet-default-a",
+                        "SubnetAvailabilityZone": {
+                            "Name": "us-east-1a"
+                        },
+                        "SubnetStatus": "Active"
+                    }
+                ],
+                "DBSubnetGroupArn": "arn:aws:rds:us-east-1:000000000000:subgrp:default"
+            },
+            "PreferredMaintenanceWindow": "mon:00:00-mon:03:00",
+            "MultiAZ": false,
+            "EngineVersion": "16.3",
+            "PubliclyAccessible": false,
+            "StorageType": "gp2",
+            "DbiResourceId": "db-ED2AC532C94742869EFDA0C4",
+            "DBInstanceArn": "arn:aws:rds:us-east-1:000000000000:db:mi-postgres",
+            "IAMDatabaseAuthenticationEnabled": false,
+            "TagList": []
+        }
+    ]
+}
