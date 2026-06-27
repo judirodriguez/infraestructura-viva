@@ -1,0 +1,41 @@
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "pedidoId",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Pedidos",
+        "KeySchema": [
+            {
+                "AttributeName": "pedidoId",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "ACTIVE",
+        "CreationDateTime": "2026-06-27T06:10:46+00:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 0,
+            "WriteCapacityUnits": 0
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:us-east-1:000000000000:table/Pedidos",
+        "TableId": "b952ec38-b8fe-47ea-a6ec-1976c5cfd732",
+        "BillingModeSummary": {
+            "BillingMode": "PAY_PER_REQUEST",
+            "LastUpdateToPayPerRequestDateTime": "2026-06-27T06:10:46+00:00"
+        },
+        "TableClassSummary": {
+            "TableClass": "STANDARD"
+        },
+        "DeletionProtectionEnabled": false,
+        "WarmThroughput": {
+            "ReadUnitsPerSecond": 0,
+            "WriteUnitsPerSecond": 0,
+            "Status": "ACTIVE"
+        }
+    }
+}
