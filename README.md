@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-**Infraestructura Viva** es una solución de arquitectura cloud diseñada para **Soluciones Digitales ACME**, que migra su entorno on-premise a una infraestructura moderna, escalable y segura utilizando servicios emulados de AWS a través de **Floci**.
+**Infraestructura Viva** es una solución de arquitectura cloud diseñada para una empresa de soluciones digitales, que migra su entorno on-premise a una infraestructura moderna, escalable y segura utilizando servicios emulados de AWS a través de **Floci**.
 
 El proyecto incluye la implementación de almacenamiento, bases de datos relacionales y NoSQL, cómputo serverless, redes virtuales y un sistema de mensajería y notificaciones, demostrando la capacidad de diseñar y desplegar una infraestructura cloud completa, en un entorno local controlado con Floci.
 
@@ -29,16 +29,16 @@ graph TD
         end
 
         subgraph PrivateSubnet ["Subred Privada (10.0.2.0/24)"]
-            RDS[("RDS PostgreSQL <br> Tabla: clientes")]
-            Dynamo[("DynamoDB <br> Tabla: Pedidos <br> GSI: EstadoIndex")]
-            Lambda[["Lambda <br> Función: saludar"]]
-            SQS[("SQS <br> cola-soporte")]
+            RDS[("RDS PostgreSQL <br>")]
+            Dynamo[("DynamoDB <br> GSI")]
+            Lambda[["Lambda <br> Función"]]
+            SQS[("SQS <br> cola")]
         end
     end
 
     subgraph Global ["Servicios Globales"]
-        S3[("S3 <br> Bucket: acme-datos-frecuentes <br> + Glacier")]
-        SNS["SNS <br> Tópico: nuevos-pedidos"]
+        S3[("S3 <br> Bucket: empresa-datos-frecuentes <br> + Glacier")]
+        SNS["SNS <br> Tópico"]
         IAM["IAM <br> (Roles/Usuarios)"]
     end
 
@@ -128,7 +128,7 @@ Usar --cli-binary-format raw-in-base64-out para evitar errores de codificación:
 aws lambda invoke --function-name saludar --payload '{"name": "test"}' --cli-binary-format raw-in-base64-out response.json
 ```
 
-###Credenciales en AWS CLI
+### Credenciales en AWS CLI
 
 Las credenciales test/test son válidas para Floci y están configuradas en ~/.aws/credentials.
 
